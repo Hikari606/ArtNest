@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
   const { cart } = useCart();
   const itemCount = cart.length;
+  const { isAuthenticated, logout, user } = useAuth();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   // تحديث موقع الماوس بالنسبة للعنصر
@@ -48,18 +50,30 @@ export default function Navbar() {
           >
             Home
           </Link>
-          <Link
-            to="/profile"
-            className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#bde0fe]/50 transition-all duration-200 text-gray-700 font-medium"
-          >
-            Profile
-          </Link>
-          <Link
-            to="/add-handmade"
-            className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#d0f0c0]/50 transition-all duration-200 text-gray-700 font-medium"
-          >
-            Add Handmade
-          </Link>
+          {isAuthenticated && (
+            <Link
+              to="/profile"
+              className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#bde0fe]/50 transition-all duration-200 text-gray-700 font-medium"
+            >
+              Profile
+            </Link>
+          )}
+          {/* {isAuthenticated && (
+            <Link
+              to="/add-handmade"
+              className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#d0f0c0]/50 transition-all duration-200 text-gray-700 font-medium"
+            >
+              Add Handmade
+            </Link>
+          )} */}
+          {isAuthenticated && (
+            <Link
+              to="/dashboard"
+              className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#bde0fe]/50 transition-all duration-200 text-gray-700 font-medium"
+            >
+              Dashboard
+            </Link>
+          )}
           <Link
             to="/about"
             className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#ffdbe6]/50 transition-all duration-200 text-gray-700 font-medium"
@@ -83,6 +97,21 @@ export default function Navbar() {
               </span>
             )}
           </Link>
+          {!isAuthenticated ? (
+            <Link
+              to="/login"
+              className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#ffe6e0]/50 transition-all duration-200 text-gray-700 font-medium"
+            >
+              Login
+            </Link>
+          ) : (
+            <button
+              onClick={logout}
+              className="relative px-4 py-2 rounded-lg hover:shadow-lg hover:bg-[#ffe6e0]/50 transition-all duration-200 text-gray-700 font-medium"
+            >
+              Logout{user?.username ? ` (${user.username})` : ""}
+            </button>
+          )}
         </nav>
       </div>
     </header>
