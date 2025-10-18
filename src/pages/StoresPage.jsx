@@ -40,7 +40,7 @@ const stores = [
     description: "Art Home is a collaborative space where creativity comes to life. It offers us a welcoming place to hold sessions, workshops, or in-person courses, fostering learning and artistic exchange.",
     link: "https://www.instagram.com/art.home.iq?igsh=MW82b29rdGZ5YWlxNw==",
     color: "bg-gray-100",
-    img: "https://github.com/Hikari606/ArtNest/blob/main/src/assets/image.png?raw=true"
+    img: "src/assets/image.png"
   },
 ];
 
