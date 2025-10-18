@@ -10,5 +10,5 @@ export const imageData = [
   { id: 9, src: "https://willowandsage.com/wp-content/uploads/2024/01/The-Art-of-Candle-Making.jpg", name: 'Candle Art', description: 'Bottom left paint brushes', price: 6.0, category: 'candles' },
   { id: 10, src: "https://longreads.com/wp-content/uploads/2018/06/gettyimages-890109838.jpg", name: 'Painting', description: 'Hand drawing sketch', price: 11.0, category: 'painting' },
   { id: 11, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Xdwgw1F1Hvp7URHZZLo01_7hlMmLABknhA&s", name: 'Other Arts', description: 'Bottom embroidery hoop', price: 13.0, category: 'other' },
-  { id: 14, src: "src/assets/image.png", name: 'Art Home', description: 'Art Home', link: "https://www.instagram.com/art.home.iq?igsh=MW82b29rdGZ5YWlxNw==", category: 'ArtHome'},
+  { id: 14, src: "https://img.freepik.com/premium-vector/rainbow-colored-vectorized-ink-sketch-galaxy-illustration_95164-6093.jpg", name: 'Art Home', description: 'Art Home', link: "https://www.instagram.com/art.home.iq?igsh=MW82b29rdGZ5YWlxNw==", category: 'ArtHome'},
 ];
