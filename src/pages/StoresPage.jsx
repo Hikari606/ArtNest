@@ -40,7 +40,7 @@ const stores = [
     description: "Art Home is a collaborative space where creativity comes to life. It offers us a welcoming place to hold sessions, workshops, or in-person courses, fostering learning and artistic exchange.",
     link: "https://www.instagram.com/art.home.iq?igsh=MW82b29rdGZ5YWlxNw==",
     color: "bg-gray-100",
-    img: "src/assets/image.png"
+    img: "https://img.freepik.com/premium-vector/rainbow-colored-vectorized-ink-sketch-galaxy-illustration_95164-6093.jpg"
   },
 ];
 
